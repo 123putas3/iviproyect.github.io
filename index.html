@@ -1,0 +1,389 @@
+<html><head><base href="." /><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Sistema Identificador de Vehículos Inteligente</title>
+
+
+    <link rel="stylesheet" href="stilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+    <body>
+    
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <svg width="35" height="35" viewBox="0 0 100 100">
+          <defs>
+            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:var(--accent-color)"/>
+              <stop offset="100%" style="stop-color:var(--secondary-color)"/>
+            </linearGradient>
+          </defs>
+          <circle cx="50" cy="50" r="45" fill="none" stroke="url(#logoGradient)" stroke-width="2"/>
+          <path d="M30 55 L35 55 L40 45 L60 45 L65 55 L70 55 L70 60 L65 60 L65 65 L35 65 L35 60 L30 60 Z" 
+                fill="none" 
+                stroke="var(--accent-color)" 
+                stroke-width="2"/>
+          <circle cx="40" cy="63" r="3" fill="var(--accent-color)"/>
+          <circle cx="60" cy="63" r="3" fill="var(--accent-color)"/>
+          <line x1="25" y1="50" x2="75" y2="50" 
+                stroke="var(--accent-color)" 
+                stroke-width="2" 
+                stroke-dasharray="3,3">
+            <animateTransform
+              attributeName="transform"
+              type="translate"
+              from="0 -20"
+              to="0 20"
+              dur="1.5s"
+              repeatCount="indefinite"/>
+          </line>
+        </svg>
+      </div>
+      <div class="nav-links">
+        <a href="#header">Inicio</a>
+        <a href="#contacto">Contáctame</a>
+      </div>
+    </nav>
+    
+    <header class="header" id="header">
+      <div class="header-content">
+        <div class="header-image">
+          <svg viewBox="0 0 200 200">
+            <defs>
+              <linearGradient id="carGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#00d2d3"/>
+                <stop offset="100%" style="stop-color:#00a8a9"/>
+              </linearGradient>
+            </defs>
+            <rect x="40" y="80" width="120" height="50" rx="10" fill="url(#carGradient)"/>
+            <rect x="60" y="50" width="80" height="40" rx="5" fill="url(#carGradient)"/>
+            <circle cx="70" cy="130" r="15" fill="#ffffff"/>
+            <circle cx="130" cy="130" r="15" fill="#ffffff"/>
+          </svg>
+        </div>
+        <div class="header-text">
+          <h1>Sistema Identificador de Vehículos Inteligente
+            (ivi)
+          </h1>
+          <p>Tecnología avanzada para la gestión y seguridad vehicular</p>
+        </div>
+      </div>
+    </header>
+    
+    <main class="container" id="inicio">
+        <section class="features">
+            <div class="feature-card">
+                <i class="fas fa-camera feature-icon"></i>
+                <h3>Reconocimiento Automático</h3>
+                <p>Identificación instantánea de matrículas y características del vehículo mediante IA avanzada.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-database feature-icon"></i>
+                <h3>Base de Datos en Tiempo Real</h3>
+                <p>Actualización constante de información vehicular y acceso inmediato a registros históricos.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt feature-icon"></i>
+                <h3>Seguridad Mejorada</h3>
+                <p>Sistema de alertas y notificaciones para vehículos sospechosos o reportados.</p>
+            </div>
+        </section>
+    
+        <section class="how-it-works">
+            <h2>¿Cómo Funciona?</h2>
+            <img alt="diagrama de flujo del sistema, estilo técnico y moderno, colores azul y gris" src="imagenes/body.jpg" width="800" height="400">
+            <p>Nuestro sistema utiliza cámaras de alta definición y algoritmos de IA para identificar y procesar información vehicular en tiempo real.</p>
+        </section>
+    
+        <section class="benefits">
+            <h2>Beneficios</h2>
+            <div class="features">
+                <div class="feature-card" style="background: rgba(255,255,255,0.1);">
+                    <i class="fas fa-tachometer-alt feature-icon"></i>
+                    <h3>Mayor Eficiencia</h3>
+                    <p>Reduce tiempos de procesamiento y mejora la gestión del tráfico.</p>
+                </div>
+                <div class="feature-card" style="background: rgba(255,255,255,0.1);">
+                    <i class="fas fa-chart-line feature-icon"></i>
+                    <h3>Análisis Avanzado</h3>
+                    <p>Genera reportes detallados y estadísticas para mejor toma de decisiones.</p>
+                </div>
+            </div>
+        </section>
+    
+        <section class="upload-section">
+            <div>
+                <h2>Análisis de Imágenes</h2>
+                <p>Sube una imagen de un vehículo para realizar un análisis detallado utilizando nuestra tecnología de IA.</p>
+            </div>
+            <div class="upload-zone" id="uploadZone">
+                <i class="fas fa-cloud-upload-alt" style="font-size: 3rem; color: var(--accent-color);"></i>
+                <p>Arrastra y suelta una imagen o haz clic para seleccionar</p>
+                <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+            </div>
+        </section>
+    
+        <section>
+            <h2>Tecnología Avanzada</h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <i class="fas fa-microchip feature-icon"></i>
+                    <h3>Procesamiento Neural</h3>
+                    <p>Redes neuronales profundas para identificación precisa de vehículos y características.</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fas fa-network-wired feature-icon"></i>
+                    <h3>Edge Computing</h3>
+                    <p>Procesamiento en tiempo real en el borde para respuestas instantáneas.</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fas fa-lock feature-icon"></i>
+                    <h3>Blockchain</h3>
+                    <p>Registro inmutable de datos para máxima seguridad y trazabilidad.</p>
+                </div>
+            </div>
+        </section>
+    
+        <section>
+            <h2>Aplicaciones</h2>
+            <div class="app-showcase">
+                <div class="app-card">
+                    <div class="app-content">
+                        <i class="fas fa-parking app-icon"></i>
+                        <h3>Control de Accesos</h3>
+                        <p>Gestión automatizada de estacionamientos y zonas restringidas.</p>
+                    </div>
+                </div>
+                <div class="app-card">
+                    <div class="app-content">
+                        <i class="fas fa-traffic-light app-icon"></i>
+                        <h3>Gestión de Tráfico</h3>
+                        <p>Optimización de flujo vehicular y detección de infracciones.</p>
+                    </div>
+                </div>
+                <div class="app-card">
+                    <div class="app-content">
+                        <i class="fas fa-search app-icon"></i>
+                        <h3>Investigación</h3>
+                        <p>Apoyo en investigaciones policiales y seguimiento de vehículos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <h3>¡Mantente Conectado!</h3>
+            <p class="social-subtitle">Síguenos en nuestras redes sociales</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/alvin.ni.56?mibextid=ZbWKwL" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/alviincrk/profilecard/?igsh=ZWkyY2FyOGt0dnc=" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/51987737174" target="_blank" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="contact-info">
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sistema Identificador de Vehículos Inteligente</p>
+                <p>Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const observerOptions = {
+            threshold: 0.1
+        };
+    
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+    
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.5s ease-out';
+            observer.observe(card);
+        });
+    
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                card.style.background = `
+                    radial-gradient(circle at ${x}px ${y}px, 
+                    rgba(0, 210, 211, 0.1) 0%,
+                    var(--card-bg) 50%)
+                `;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.background = 'var(--card-bg)';
+            });
+        });
+    
+        const uploadZone = document.getElementById('uploadZone');
+        const imageUpload = document.getElementById('imageUpload');
+    
+        uploadZone.addEventListener('click', () => {
+            imageUpload.click();
+        });
+    
+        uploadZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadZone.style.background = 'rgba(0, 210, 211, 0.2)';
+        });
+    
+        uploadZone.addEventListener('dragleave', () => {
+            uploadZone.style.background = 'transparent';
+        });
+    
+        uploadZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadZone.style.background = 'transparent';
+            const file = e.dataTransfer.files[0];
+            if (file && file.type.startsWith('image/')) {
+                handleImage(file);
+            }
+        });
+    
+        imageUpload.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                handleImage(file);
+            }
+        });
+    
+        function handleImage(file) {
+            console.log('Imagen seleccionada:', file.name);
+        }
+    
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('mousemove', (e) => {
+                const rect = img.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                img.style.boxShadow = `
+                  0 8px 25px rgba(0, 210, 211, 0.3),
+                  ${x/20}px ${y/20}px 20px rgba(0, 210, 211, 0.2)
+                `;
+            });
+            
+            img.addEventListener('mouseleave', () => {
+                img.style.boxShadow = '0 5px 15px rgba(0, 210, 211, 0.1)';
+            });
+        });
+    
+        document.querySelectorAll('.navbar a').forEach(link => {
+            link.addEventListener('mouseover', (e) => {
+                const x = e.pageX - link.offsetLeft;
+                const y = e.pageY - link.offsetTop;
+                
+                link.style.setProperty('--x', `${x}px`);
+                link.style.setProperty('--y', `${y}px`);
+            });
+            
+            link.addEventListener('click', () => {
+                document.querySelectorAll('.navbar a').forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+    
+        document.querySelector('.navbar').style.opacity = '0';
+        document.querySelector('.navbar').style.transform = 'translateY(-20px)';
+        setTimeout(() => {
+            document.querySelector('.navbar').style.opacity = '1';
+            document.querySelector('.navbar').style.transform = 'translateY(0)';
+        }, 300);
+        
+        function createParticles() {
+            for(let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.style.cssText = `
+                    position: fixed;
+                    width: ${Math.random() * 3}px;
+                    height: ${Math.random() * 3}px;
+                    background: rgba(0, 210, 211, ${Math.random() * 0.5});
+                    left: ${Math.random() * 100}vw;
+                    bottom: -10px;
+                    border-radius: 50%;
+                    animation: floatingParticles ${Math.random() * 20 + 10}s linear infinite;
+                    z-index: -1;
+                `;
+                document.body.appendChild(particle);
+            }
+        }
+    
+        createParticles();
+    
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    
+        const headerImage = document.querySelector('.header-image');
+    
+        headerImage.addEventListener('mouseover', () => {
+            headerImage.style.animationDuration = '1s';
+        });
+    
+        headerImage.addEventListener('mouseout', () => {
+            headerImage.style.animationDuration = '2s';
+        });
+    
+        headerImage.addEventListener('click', () => {
+            headerImage.style.transform = 'scale(1.1)';
+            setTimeout(() => {
+                headerImage.style.transform = 'scale(1)';
+            }, 200);
+        });
+    
+        const titleObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('typing');
+                } else {
+                    entry.target.classList.remove('typing');
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+    
+        const title = document.querySelector('.header-text h1');
+        if (title) {
+            titleObserver.observe(title);
+        }
+    });
+    </script>
+    
+    </body></html>
